@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Login page/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Login page</title>
+</head>
+<body>
+    <div class="login-page-main">
+        <div class="login-page-logo">
+            <a href="/index.html"><img src="/assets/img/logo.jpg" alt="logo"></a>
+        </div>
+        <div class="login-page-header">
+            <h1>ĐĂNG NHẬP</h1>
+        </div>
+        <div class="login-page-form">
+            <form class="form-item"> 
+                <i class="fa-solid fa-user"></i> <input type="text" name="" placeholder="Tên đăng nhập" required> 
+            </form>
+            <form class="form-item">
+                <i class="fa-solid fa-lock"></i> <input type="password" name="" placeholder="Mật khẩu" id="password" required> <i class="far fa-eye" id="togglePassword"></i>
+            </form>
+        </div>
+        <div class="login-page-other">
+            <div class="checkbox">
+                <input type="checkbox" id="rememberme">
+                <label for="rememberme">Nhớ mật khẩu</label>
+            </div>
+            <a href="/Login page/assets/html/forgetpass.html">Quên mật khẩu</a>
+        </div>
+        <input type="submit" class="dangnhap" value="Đăng nhập" required></input>
+        <div class="register">
+            <p>Không có tài khoản?</p>
+            <a href="/Login page/assets/html/register.html">Tạo miễn phí ngay</a>
+        </div>
+        <div class="login-page-footer">
+            <a href=""><i class="fa fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa fa-brands fa-discord"></i></a>
+            <a href=""><i class="fa fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+    <script>
+const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#password');
+
+  togglePassword.addEventListener('click', function (e) {
+    // Hiện pass
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // hiện/ẩn pass khi bấm vào con mắt
+    this.classList.toggle('fa-eye-slash');
+});
+    </script>
+</body>
+</html>

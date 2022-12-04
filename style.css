@@ -1,0 +1,127 @@
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+li, ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.logo h1 a {
+    padding-left: 20px;
+}
+
+.navbar {
+    padding-right: 10px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation li {
+    padding: 0 20px;
+    position: relative;
+}
+
+.navigation a {
+    color: black;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.btn-register {
+    padding: 15px 15px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: #2abfff !important;
+    border-radius: 10px;
+    transition: 0.4s;
+    font-weight: 500;
+}
+
+.btn-login:hover {
+    opacity: 0.6;
+}
+
+.navigation li a:hover,
+.navigation li a.active {
+    color: #8acae6;
+    transition: 0.2s ;
+}
+
+.navigation-items {
+    display: none;
+}
+
+.navbar ul li:hover .navigation-items {
+    display: block;
+    position: absolute; 
+    background-color: rgba(255, 255, 255, 1);
+    left: 0;
+    top: 100%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    animation: rotateX 300ms ease-in-out forwards;
+    transform-origin: top center
+}
+
+@keyframes rotateX {
+    0% {
+        opacity: 0;
+        transform: rotateX(-90deg);
+      }
+      50% {
+        transform: rotateX(-20deg);
+      }
+      100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+      }
+}
+
+.navbar ul li:hover .navigation-items ul {
+    display: block;
+    margin: 12px;
+}
+
+.navbar ul li:hover .navigation-items ul li {
+    padding: 12px;
+}
+
